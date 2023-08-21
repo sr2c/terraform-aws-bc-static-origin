@@ -3,6 +3,7 @@ module "lambda_origin_response" {
     aws = aws.us_east_1
   }
   source                            = "terraform-aws-modules/lambda/aws"
+  version                           = "6.0.0"
   function_name                     = "${module.this.id}-static-origin-response"
   description                       = "Add security headers"
   handler                           = "index.handler"
@@ -19,6 +20,7 @@ module "lambda_origin_request" {
     aws = aws.us_east_1
   }
   source                            = "terraform-aws-modules/lambda/aws"
+  version                           = "6.0.0"
   function_name                     = "${module.this.id}-static-origin-request"
   description                       = "Directories"
   handler                           = "index.handler"
@@ -35,6 +37,7 @@ module "weblite_origin_request" {
     aws = aws.us_east_1
   }
   source                            = "terraform-aws-modules/lambda/aws"
+  version                           = "6.0.0"
   function_name                     = "${module.this.id}-weblite-origin-request"
   description                       = "Directories"
   handler                           = "index.handler"
@@ -51,6 +54,7 @@ module "weblite_origin_response" {
     aws = aws.us_east_1
   }
   source                            = "terraform-aws-modules/lambda/aws"
+  version                           = "6.0.0"
   function_name                     = "${module.this.id}-weblite-origin-response"
   description                       = "Add security headers for weblite"
   handler                           = "index.handler"
